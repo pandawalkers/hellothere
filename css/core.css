@@ -1,0 +1,332 @@
+/*在webkit内核的浏览器里可以定义滚动条样式。
+在CSS初始处定义,隐藏滚动条*/
+
+::-webkit-scrollbar{
+display:none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0 0;
+    padding: 0;
+    /*--def: #96B7C4;*/
+    /*--inv: #fff;*/
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0 0;
+    padding: 0;
+    background: rgb(245, 246, 55);
+    background: linear-gradient(180deg, rgba(245, 246, 55, 1) 0%, rgba(55, 246, 234, 1) 37%);
+}
+
+.ad {
+    /*background-color: #F6F8FF;*/
+    height: 30%;
+}
+
+.gifleft {
+    visibility: hidden;
+    float: left;
+    width: 30%;
+    height: 100%;
+    /*background: black url("") no-repeat center;*/
+}
+
+.adshow {
+    float: left;
+    width: 40%;
+    height: 100%;
+    background: url("../images/p1.png") no-repeat center;
+    -webkit-background-size: 100% 99%;
+}
+
+.gifright {
+    visibility: hidden;
+    float: left;
+    width: 30%;
+    height: 100%;
+    /*background: black url("http://img.ui.cn/data/file/9/3/4/1918439.gif?imageMogr2/auto-orient/strip") no-repeat center;*/
+
+}
+
+.content {
+    position: absolute;
+    /*background-color: burlywood;*/
+    height: 70%;
+    width: 100%;
+}
+
+.container {
+    /*background-color: #362A89;*/
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0 0;
+    padding: 0;
+}
+
+.container_inner {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0 0;
+    padding: 0;
+    /*background-color: #F6F8FF;*/
+}
+
+.joker {
+    /*background-color: brown;*/
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    line-height: 120px;
+}
+
+.jokeshow {
+    float: left;
+    /*background-color: #3aac48;*/
+    width: 70%;
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.details {
+    /*background-color: violet;*/
+    width: 100%;
+    height: 80%;
+}
+
+.left {
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+
+.btnhome {
+    float: left;
+    /*background-color: darkcyan;*/
+    width: 100%;
+    height: 40%;
+}
+
+.home {
+    width: 100%;
+    height: 50%;
+}
+
+.backhome {
+    width: 100%;
+    height: 100%;
+    margin: 5px 0;
+}
+
+.contact {
+    width: 100%;
+    height: 50%;
+}
+
+.contactme {
+    width: 100%;
+    height: 100%;
+    margin: 15px 0;
+}
+
+.contentleft {
+    float: right;
+    /*background-color: #3aac48;*/
+    width: 100%;
+    height: 60%;
+}
+
+.zhanwei {
+    float: left;
+    width: 10%;
+    height: 100%;
+}
+
+.contentright {
+    float: left;
+    overflow: scroll;
+    /*IE 10+滚动条隐藏*/
+    -ms-overflow-style: none;
+    /*Firefox滚动条隐藏*/
+    overflow: -moz-scrollbars-none;
+    /*background-color: darkcyan;*/
+    width: 70%;
+    height: 100%;
+}
+
+/*chrome 和Safari滚动条隐藏*/
+.contentright::-webkit-scrollbar { width: 0 !important }
+
+/*具体内容*/
+.siteshow {
+    margin: 0 150px 0 0;
+    width: 100%;
+    height: 25%;
+    /*background-color: #222222;*/
+}
+
+.siteImg {
+    float: left;
+    width: 10%;
+    height: 100%;
+    /*background-color: #FF5857;*/
+}
+
+.siteDetails {
+    list-style-type: none;
+    float: left;
+    width: 60%;
+    height: 100%;
+    left: 80px;
+    /*background-color: #ff9900;*/
+}
+
+.siteName {
+    width: 100%;
+    height: 30%;
+}
+
+.siteUrl {
+    width: 100%;
+    height: 30%;
+}
+
+.siteUrl a {
+    text-decoration: none;
+}
+
+.siteDescription {
+    width: 100%;
+    height: 40%;
+}
+
+.siteStar {
+    list-style-type: none;
+    float: left;
+    width: 30%;
+    height: 100%;
+    /*background-color: #FFBA57;*/
+}
+
+.starLike {
+    text-align: center;
+    vertical-align: center;
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.starUnlike {
+    text-align: center;
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+/*按钮部分*/
+.home {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    just-content: flex-start;
+    height: 40%;
+    margin: 0.3em 0.1rem;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    just-content: flex-start;
+    height: 40%;
+    margin: 0.5em 0.1rem;
+}
+
+.backhome, .contactme {
+    position: relative;
+    display: block;
+    margin: 5px 8px 0 5px;
+    padding: 0 1.8em 0;
+    border: none;
+    background-color: #FFBA57;
+    font-family: monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    /*字体垂直居中*/
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #222;
+    box-shadow: inset 0.1em -0.2em 0 4px #FF5857, inset -0.1em -0.2em 0 4px #FF5857, inset 0.08em -0.18em 0 5px #bd0100, inset -0.08em -0.18em 0 5px #bd0100;
+    border-radius: 0.7rem;
+    overflow: hidden;
+    transition: all 90ms ease-in-out;
+}
+
+.backhome:active {
+    padding: 0.05em 1.8em 0;
+    box-shadow: inset 0.05em -0.15em 0 4px #FF5857, inset -0.05em -0.15em 0 4px #FF5857, inset 0.03em -0.13em 0 5px #bd0100, inset -0.03em -0.13em 0 5px #bd0100;
+    outline: none;
+}
+
+.contactme:active {
+    padding: 0.05em 1.8em 0;
+    box-shadow: inset 0.05em -0.15em 0 4px #FF5857, inset -0.05em -0.15em 0 4px #FF5857, inset 0.03em -0.13em 0 5px #bd0100, inset -0.03em -0.13em 0 5px #bd0100;
+    outline: none;
+}
+
+.backhome, .contactme:focus {
+    outline: none;
+}
+
+
+/*joke滚动*/
+.jokeshow {
+    overflow: hidden; /*　　//（超出隐藏）*/
+}
+
+.joke {
+    /*background-color: #362A89;*/
+    font-size: 23px;
+    color: #eb4408;
+    display: inline-block;
+    white-space: nowrap;
+    animation: wordsLoop 35s 0s linear infinite normal;
+}
+
+/*.spacetwo {*/
+/*    float: left;*/
+/*}*/
+
+@keyframes wordsLoop {
+    0% {
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes wordsLoop {
+    0% {
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+
+.joke:hover {
+    animation-play-state: paused;
+}
