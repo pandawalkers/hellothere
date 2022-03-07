@@ -1,12 +1,15 @@
 from django.urls import path
-from stone import views
+from django.contrib import admin
+from . import views
+
+# from redsite import settings
+# from django.views.static import serve
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
-    # path('', view=views.index, name='index'),
-    path('', view=views.myStone),
-    # path('', view=views.mystone, name='home'),
-    # path('h/', views.mystone),
+    path(r'heng/', admin.site.urls),
+    path(r'home/', views.myStone),
+    path(r'movie/', views.myMovie),
+    path(r'test/', views.myTest),
 ]
 
 # handler404 = views.page_not_found

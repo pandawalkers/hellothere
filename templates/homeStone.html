@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,16 +6,16 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="/public/css/home.css" charset="UTF-8">
-    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1876229_0zx71ac47svq.css" charset="UTF-8">
-    <script src="../js/guidebtn.js"></script>
-    <title>CSS TEMP</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}" charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'http://at.alicdn.com/t/font_1876229_0zx71ac47svq.css' %}" charset="UTF-8">
+    <script src="{% static 'js/guidebtn.js' %}"></script>
+    <title>未来已来</title>
 </head>
 <body>
 <div class="container">
     <div class="guideContainer">
         <button class="running-button" onclick="guideShow()">
-            <span class="default">BlueBall</span>
+            <span class="default">WARRIOR</span>
             <span class="active">Tracking</span>
             <div class="running">
                 <div class="outer">
@@ -30,11 +31,12 @@
 
         <div class="list">
             <ul class="downlist">
-                <li><i class="iconfont icon-watchseries"></i><a href="compare.html"  target="_blank">电影</a></li>
+                <li><i class="iconfont icon-watchseries"></i><a href="/test" target="_blank">电影</a></li>
                 <li><i class="iconfont icon-musiclist"></i><a href="http://www.baidu.com" target="_blank">音乐</a></li>
                 <li><i class="iconfont icon-address"></i><a href="http://www.baidu.com" target="_blank">机场酸酸乳</a></li>
                 <li><i class="iconfont icon-prompt"></i><a href="http://www.baidu.com" target="_blank">公告</a></li>
-                <li><i class="iconfont icon-connectdevice"></i><a href="http://www.baidu.com" target="_blank">联系我</a></li>
+                <li><i class="iconfont icon-connectdevice"></i><a href="http://www.baidu.com" target="_blank">联系我</a>
+                </li>
             </ul>
         </div>
     </div>
