@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,9 +6,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/core.css">
-    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1876229_0zx71ac47svq.css">
-    <title>内容</title>
+    <link rel="stylesheet" href="{% static '/css/core.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'http://at.alicdn.com/t/font_1876229_0zx71ac47svq.css' %}"> -->
+    <title>电影</title>
 </head>
 
 <body>
@@ -47,42 +48,40 @@
                 </div>
                 <div class="zhanwei"></div>
                 <div id="haha" class="contentright">
-
-                    <div class="siteshow">
-                        <div class="siteImg"></div>
-                        <div class="siteDetails">
-                            <li class="siteName">
-                                <a></a>
-                            </li>
-                            <li class="siteUrl">
-                                <a href=""></a>
-                            </li>
-                            <li class="siteDescription">
-                                <a></a>
-                            </li>
-                        </div>
-                        <div class="siteStar">
-                            <div class="starLike">
-                                <i class="iconfont icon-like">
-                                    <span class="et">喜欢</span>
-                                    <span class="te"></span>
-                                </i>
+                    {% for i in movie_list %}
+                        <div class="siteshow">
+                            <div class="siteImg">{{ i.image }}</div>
+                            <div class="siteDetails">
+                                <li class="siteName">
+                                    <a>{{ i.title }}</a>
+                                </li>
+                                <li class="siteUrl">
+                                    <a href='{{ i.url }}'>{{ i.url }}</a>
+                                </li>
+                                <li class="siteDescription">
+                                    <a>{{ i.content }}</a>
+                                </li>
                             </div>
-                            <div class="starUnlike">
-                                <i class="iconfont icon-dislike">
-                                    <span>不喜欢</span>
-                                    <span></span>
-                                </i>
+                            <div class="siteStar">
+                                <div class="starLike">
+                                    <i class="iconfont icon-'like'">
+                                        <img class="a" src="{% static '/images/ic_fav.png' %}"/>
+                                        <a class="b" >{{ i.like }}</a>
+                                    </i>
+                                </div>
+                                <div class="starUnlike">
+                                    <i class="iconfont icon-dis'like'">
+                                        <span>不喜欢</span>
+                                        <span>{{ i.unlike }}</span>
+                                    </i>
+                                </div>
                             </div>
                         </div>
-
-                    </div>
-
+                    {% endfor %}
                 </div>
             </div>
         </div>
     </div>
 </div>
 </body>
-<script src="../js/siteShowPage.js"></script>
 </html>
